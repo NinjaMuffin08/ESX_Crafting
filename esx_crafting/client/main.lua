@@ -78,7 +78,7 @@ function OpenCraftMenu()
 		  'default', GetCurrentResourceName(), 'craft_menu',
 		  {
 			title    = "Käsityövalikko",
-			align    = "top-left",
+			align    = "top-right",
 			elements = options
 		  },
 		  function(data, menu)
