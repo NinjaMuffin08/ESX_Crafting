@@ -2,9 +2,9 @@
 Simple Crafting System for es extended
 
 Features:
-1. Craft items from other items.
+1. Ability to craft items from other items.
 2. Open menu with CTRL + C (export coming soon)
-3. Auto-discover recipies when player has the required items
+3. Auto-discover recipes
 
 
 Installation:
