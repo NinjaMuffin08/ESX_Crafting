@@ -1,4 +1,4 @@
-# ESX_Crafting
+# ESX_Crafting 0.0.1
 Simple Crafting System for es extended
 
 Features:
@@ -9,7 +9,7 @@ Features:
 
 Installation:
 1. Import SQL if you want to keep current recipies
-2. Copy to ESX
+2. Copy to [esx]
 3. Add to start
 
 Addin recipes:
