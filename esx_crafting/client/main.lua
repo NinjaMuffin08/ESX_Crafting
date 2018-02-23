@@ -21,7 +21,7 @@ end)
 local trace = false
 function dbg(msg)
 	if trace then
-		TriggerEvent('chatMessage', "", {255, 0, 0}, " ^1[ESX_CRAFING]: " .. tostring(msg))
+		TriggerEvent('chatMessage', "", {255, 0, 0}, " ^1[ESX_CRAFTING]: " .. tostring(msg))
 	end
 end
 
