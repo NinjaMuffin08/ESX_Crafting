@@ -114,6 +114,7 @@ Config.Craftables = {
 			{ Name = "sausage", Amount = 1 },
 			{ Name = "potato", Amount = 4 },
 			{ Name = "plate1", Amount = 1 },
+			{ Name = "water", Amount = 1 },
 		},
 		
 		Reward = {Item = "hm_food1", Count = 1 },
