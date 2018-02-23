@@ -3,14 +3,14 @@ Simple Crafting System for es extended
 
 Features:
 1. Ability to craft items from other items.
-2. Open menu with CTRL + C (export coming soon)
-3. Auto-discover recipes
+2. Auto-discover recipes
 
 
 Installation:
-1. Import SQL if you want to keep current recipies
+1. Import SQL if you want to keep current recipes
 2. Copy to [esx]
 3. Add to start
+4. Open menu with CTRL + C (export coming soon)
 
 Addin recipes:
 1. Insert a new entry in config.
