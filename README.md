@@ -3,7 +3,7 @@ Simple Crafting System for es extended
 
 Features:
 1. Ability to craft items from other items.
-2. Auto-discover recipes
+2. Auto-discover recipes (manual discovery mode would be way too harsh)
 
 
 Installation:
