@@ -38,8 +38,13 @@ AddEventHandler('esx_crafting:craftItem', function (CraftableTemp)
 		dbg("crafting item .." .. Craftable.Label)
 		dbg("Craftable reward: " .. Craftable.Reward.Item .. " x"  .. Craftable.Reward.Count)
 		ESX.SetTimeout(Craftable.Time, function()
-			dbg("crafting item .." .. Craftable.Label)
-			xPlayer.addInventoryItem(Craftable.Reward.Item, Craftable.Reward.Count)
+			if Craftable.Reward.Type == 'item' then
+				xPlayer.addInventoryItem(Craftable.Reward.Item, Craftable.Reward.Count)
+				dbg("Rewarded with item " .. Craftable.Label)
+			elseif Craftable.Reward.Type == 'weapon' then
+				dbg("Rewarded with weapon " .. Craftable.Label)
+				xPlayer.addWeapon(Craftable.Reward.Item, Craftable.Reward.Count)
+			end
 			PlayersCrafting[_source] = false
 			TriggerClientEvent('esx_crafting:stopCraft', _source)
 		end)

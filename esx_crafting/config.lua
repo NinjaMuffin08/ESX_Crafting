@@ -13,7 +13,7 @@ Config.Craftables = {
 			{ Name = "fabric", Amount = 2 },
 		},
 		
-		Reward = {Item = "rope", Count = 1 },
+		Reward = {Item = "rope", Count = 1, Type = 'item'},
 		Time = 10000,
 	}, 
 	
@@ -23,11 +23,11 @@ Config.Craftables = {
 		
 		Require = {
 			{ Name = "pointer", Amount = 2 },
-			{ Name = "watch_frame", Amount = 2 },
+			{ Name = "watch_frame", Amount = 1 },
 			{ Name = "clothe", Amount = 1 },
 		},
 		
-		Reward = {Item = "watch", Count = 1 },
+		Reward = {Item = "watch", Count = 1 , Type = 'item'},
 		Time = 10000,
 	},
 	
@@ -44,7 +44,7 @@ Config.Craftables = {
 			{ Name = "ducttape", Amount = 1},
 		},
 		
-		Reward = {Item = "c4", Count = 1 },
+		Reward = {Item = "c4", Count = 1 , Type = 'item'},
 		Time = 30000,
 	},
 	
@@ -57,7 +57,7 @@ Config.Craftables = {
 			{ Name = "juice", Amount = 1 },
 		},
 		
-		Reward = {Item = "juicedrink", Count = 3 },
+		Reward = {Item = "juicedrink", Count = 3 , Type = 'item'},
 		Time = 2000,
 	},
 	
@@ -71,7 +71,7 @@ Config.Craftables = {
 			{ Name = "sugar", Amount = 1 },
 		},
 		
-		Reward = {Item = "juicedrink2", Count = 4 },
+		Reward = {Item = "juicedrink2", Count = 4 , Type = 'item'},
 		Time = 2000,
 	},
 	
@@ -86,7 +86,7 @@ Config.Craftables = {
 			{ Name = "salt", Amount = 1 },
 		},
 		
-		Reward = {Item = "hm_medikit", Count = 1 },
+		Reward = {Item = "hm_medikit", Count = 1 , Type = 'item'},
 		Time = 7000,
 	},
 	
@@ -102,7 +102,7 @@ Config.Craftables = {
 			{ Name = "lighter", Amount = 1 },
 		},
 		
-		Reward = {Item = "hm_pizza", Count = 1 },
+		Reward = {Item = "hm_pizza", Count = 1 , Type = 'item'},
 		Time = 17000,
 	},
 	
@@ -117,8 +117,35 @@ Config.Craftables = {
 			{ Name = "water", Amount = 1 },
 		},
 		
-		Reward = {Item = "hm_food1", Count = 1 },
+		Reward = {Item = "hm_food1", Count = 1, Type = 'item'},
 		Time = 14000,
+	},
+	
+	strongbrew = {
+	
+		Label = "Kilju",
+		
+		Require = {
+			{ Name = "water", Amount = 5 },
+			{ Name = "yeast", Amount = 4 },
+			{ Name = "emptybottleglass", Amount = 1 },
+			{ Name = "sugar", Amount = 5 },
+		},
+		
+		Reward = {Item = "strongbrew", Count = 1 , Type = 'item'},
+		Time = 14000,
+	},
+	
+	parachute = {
+	
+		Label = "Laskuvarjo",
+		
+		Require = {
+			{ Name = "unpacked_chute", Amount = 1},
+		},
+		
+		Reward = {Item = "GADGET_PARACHUTE", Count = 1 , Type = 'weapon'},
+		Time = 20000,
 	},
 	
 }

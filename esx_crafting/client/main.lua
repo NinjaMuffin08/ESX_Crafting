@@ -37,26 +37,27 @@ AddEventHandler('esx_crafting:stopCraft', function ()
 	ESX.ShowNotification('~g~Valmistus suoritettu..')
 end)
 
-function GetCraftables(inventory)
-	dbg("GetCraftables() entry, inventory length: " .. #inventory)
+function Discover(inventory)
 	craftables = {}
 	
 	for i, j in pairs(Config.Craftables) do
 		local matchCount = 0
+		local canCraft = true
 		local matchRequired = #j.Require
 		for x = 1, #j.Require, 1 do
 			for y = 1, #inventory, 1 do
 				if (inventory[y].name == j.Require[x].Name) and (inventory[y].count >= j.Require[x].Amount) then
 					matchCount = matchCount + 1
+				elseif (inventory[y].name == j.Require[x].Name) and (inventory[y].count >= 1) then
+					matchCount = matchCount + 1
+					canCraft = false
 				end
 			end
 		end
 		if matchCount >= matchRequired then
-			dbg("Found a match")
-			table.insert(craftables,{label = j.Label, value = j})
+			table.insert(craftables,{label = j.Label, value = j, flag = canCraft})
 		end
 	end
-	dbg("Returning")
 	table.insert(craftables, {label = "Poistu", value = 'gtfo'})
 	return craftables
 end
@@ -72,7 +73,7 @@ function OpenCraftMenu()
 	ESX.UI.Menu.CloseAll()
 	ESX.TriggerServerCallback('esx_policejob:getPlayerInventory', function(inventory)
 		
-		local options = GetCraftables(inventory.items)
+		local options = Discover(inventory.items)
 
 		ESX.UI.Menu.Open(
 		  'default', GetCurrentResourceName(), 'craft_menu',
@@ -82,9 +83,10 @@ function OpenCraftMenu()
 			elements = options
 		  },
 		  function(data, menu)
-			if data.current.value ~= 'gtfo' then
+			if data.current.value ~= 'gtfo' and data.current.flag then
 				TriggerServerEvent('esx_crafting:craftItem', data.current.value)
-				dbg("Crafting.. " .. data.current.value.Label)
+			elseif data.current.value ~= 'gtfo' and not data.current.flag then
+				ESX.ShowNotification('~r~Sinulla ei ole riittävästi jotain ainesosaa.')
 			end
 			menu.close()
 		  end,
@@ -97,7 +99,6 @@ function OpenCraftMenu()
 end
 
 Citizen.CreateThread(function ()
-	dbg("Craftables control thread open")
 	while true do
 		Citizen.Wait(5)
 		if IsControlPressed(0, 36) and IsControlPressed(0, 26) then -- CTRL + C

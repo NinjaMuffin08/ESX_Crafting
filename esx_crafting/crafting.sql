@@ -26,4 +26,9 @@ INSERT INTO `items` (`id`, `name`, `label`, `limit`, `rare`, `can_remove`) VALUE
 (NULL, 'pointer', 'viisari', '-1', '0', '1'),
 (NULL, 'rope', 'narunpätkä', '-1', '0', '1'),
 (NULL, 'watch_frame', 'kellon runko', '-1', '0', '1'),
-(NULL, 'toiletpaper', 'vessapaperi', '-1', '0', '1');
+(NULL, 'toiletpaper', 'vessapaperi', '-1', '0', '1'),
+
+(NULL, 'yeast', 'hiiva', '-1', '0', '1'),
+(NULL, 'strongbrew', 'kilju', '-1', '0', '1'),
+(NULL, 'radio', 'radiopuhelin', '-1', '0', '1'),
+(NULL, 'unpacked_chute', 'Pakkaamaton laskuvarjo', '-1', '0', '1');

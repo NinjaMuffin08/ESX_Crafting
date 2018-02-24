@@ -42,6 +42,19 @@ ESX.RegisterUsableItem('hm_pizza', function(source)
 
 end)
 --
+ESX.RegisterUsableItem('strongbrew', function(source)
+
+	local xPlayer = ESX.GetPlayerFromId(source)
+
+	xPlayer.removeInventoryItem('strongbrew', 1)
+	xPlayer.addInventoryItem('emptybottleglass', 1)
+	
+	TriggerClientEvent('esx_status:add', source, 'hunger', 600000)
+	TriggerClientEvent('esx_basicneeds:onEat', source)
+	TriggerClientEvent('esx:showNotification', source, "Joit kiljua")
+
+end)
+--
 ESX.RegisterUsableItem('hm_medikit', function(source)
 
 	local xPlayer = ESX.GetPlayerFromId(source)
@@ -100,6 +113,19 @@ ESX.RegisterUsableItem('painkiller2', function(source)
 	
 	TriggerClientEvent('esx_ambulancejob:heal', source, 'small')
 	TriggerClientEvent('esx:showNotification', source, "Söit kipulääkkeen")
+
+end)
+--
+ESX.RegisterUsableItem('strongbrew', function(source)
+
+	local xPlayer = ESX.GetPlayerFromId(source)
+
+	xPlayer.removeInventoryItem('strongbrew', 1)
+	xPlayer.addInventoryItem('emptybottleglass', 1)
+
+	TriggerClientEvent('esx_status:add', source, 'drunk', 250000)
+	TriggerClientEvent('esx_optionalneeds:onDrink', source)
+	TriggerClientEvent('esx:showNotification', source, "Joit kiljua..")
 
 end)
 --------------------------------------------------------------------------------
