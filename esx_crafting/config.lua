@@ -36,10 +36,11 @@ Config.Craftables = {
 		Label = "C4 Räjähde",
 		
 		Require = {
-			{ Name = "fertilizer", Amount = 3 },
+			{ Name = "fertilizer", Amount = 2 },
 			{ Name = "emptybottle", Amount = 2 },
 			{ Name = "lighter", Amount = 1 },
 			{ Name = "wire", Amount = 3 },
+			{ Name = "essence", Amount = 1 },
 			{ Name = "watch", Amount = 1},
 			{ Name = "ducttape", Amount = 1},
 		},
@@ -145,6 +146,57 @@ Config.Craftables = {
 		},
 		
 		Reward = {Item = "GADGET_PARACHUTE", Count = 1 , Type = 'weapon'},
+		Time = 25000,
+	},
+	
+	molotov = {
+	
+		Label = "Molotov",
+		
+		Require = {
+			{ Name = "toiletpaper", Amount = 5},
+			{ Name = "essence", Amount = 3},
+			{ Name = "petrol", Amount = 1},
+			{ Name = "emptybottleglass", Amount = 1},
+			{ Name = "lighter", Amount = 1},
+		},
+		
+		Reward = {Item = "WEAPON_MOLOTOV", Count = 1 , Type = 'weapon'},
+		Time = 20000,
+	},
+	
+	axe = {
+	
+		Label = "Kirves",
+		
+		Require = {
+			{ Name = "cutted_wood", Amount = 1},
+			{ Name = "rope", Amount = 2},
+			{ Name = "iron", Amount = 5},
+		},
+		
+		Reward = {Item = "WEAPON_BATTLEAXE", Count = 1 , Type = 'weapon'},
+		Time = 20000,
+	},
+	
+	pipebomb = {
+	
+		Label = "Putkipommi",
+		
+		Require = {
+			{ Name = "emptybottle", Amount = 1},
+			{ Name = "copper", Amount = 8},
+			{ Name = "wire", Amount = 3},
+			{ Name = "iron", Amount = 5},
+			{ Name = "radio", Amount = 1},
+			{ Name = "fertilizer", Amount = 3},
+			{ Name = "essence", Amount = 9},
+			{ Name = "petrol", Amount = 3},
+			{ Name = "fabric", Amount = 1},
+			{ Name = "emptycan", Amount = 1},
+		},
+		
+		Reward = {Item = "WEAPON_PIPEBOMB", Count = 1 , Type = 'weapon'},
 		Time = 20000,
 	},
 	

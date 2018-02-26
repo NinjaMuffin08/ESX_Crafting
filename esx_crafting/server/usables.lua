@@ -88,7 +88,7 @@ ESX.RegisterUsableItem('hm_food1', function(source)
 
 	xPlayer.removeInventoryItem('hm_food1', 1)
 	
-	TriggerClientEvent('esx_status:add', source, 'hunger', 500000)
+	TriggerClientEvent('esx_status:add', source, 'hunger', 900000)
 	TriggerClientEvent('esx_basicneeds:onEat', source)
 	TriggerClientEvent('esx:showNotification', source, "Söit nakkikeittoa")
 
@@ -123,7 +123,7 @@ ESX.RegisterUsableItem('strongbrew', function(source)
 	xPlayer.removeInventoryItem('strongbrew', 1)
 	xPlayer.addInventoryItem('emptybottleglass', 1)
 
-	TriggerClientEvent('esx_status:add', source, 'drunk', 250000)
+	TriggerClientEvent('esx_status:add', source, 'drunk', 350000)
 	TriggerClientEvent('esx_optionalneeds:onDrink', source)
 	TriggerClientEvent('esx:showNotification', source, "Joit kiljua..")
 
