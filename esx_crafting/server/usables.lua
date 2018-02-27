@@ -1,9 +1,7 @@
 --ESX as usual
 ESX = nil
-while ESX == nil do
-	TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-	--Citizen.Trace("Requested esx")
-end
+TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+
 -------------------REGISTER USABLES IN CASE YOU HAVE NEW ONES-------------------
 ESX.RegisterUsableItem('juicedrink', function(source)
 
