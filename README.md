@@ -7,9 +7,10 @@ Features:
 3. Ugly ESX-menu
 
 Features to come:
-1. Custom animation for each craftable.
+1. Configurable animation for each craftable
 2. Prop crafting and spawning
 3. NetEventHandler for registering craftables
+4. Export function for open menu :D 4 lines of hard work
 
 Installation:
 1. Import SQL if you want to keep current recipes
