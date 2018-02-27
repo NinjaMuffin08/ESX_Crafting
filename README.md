@@ -11,6 +11,7 @@ Features to come:
 2. Prop crafting and spawning
 3. NetEventHandler for registering craftables
 4. Export function for open menu :D 4 lines of hard work
+5. Localization for these few strings present
 
 Installation:
 1. Import SQL if you want to keep current recipes
