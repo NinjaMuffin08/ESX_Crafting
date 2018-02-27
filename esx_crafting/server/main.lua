@@ -3,7 +3,6 @@
 	
 	Crafting system for es_extended
 ]]--
---ESX as usual
 ESX = nil
 while ESX == nil do
 	TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
