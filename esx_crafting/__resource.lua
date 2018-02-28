@@ -22,3 +22,7 @@ server_scripts {
     'server/main.lua',
 	'server/usables.lua'
 }
+
+exports {
+  'openCraftMenu'
+}

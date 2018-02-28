@@ -31,4 +31,10 @@ INSERT INTO `items` (`id`, `name`, `label`, `limit`, `rare`, `can_remove`) VALUE
 (NULL, 'yeast', 'hiiva', '-1', '0', '1'),
 (NULL, 'strongbrew', 'kilju', '-1', '0', '1'),
 (NULL, 'radio', 'radiopuhelin', '-1', '0', '1'),
+
+(NULL, 'screw', 'ruuvi', '-1', '0', '1'), --to master server build
+(NULL, 'nail', 'naula', '-1', '0', '1'),
+(NULL, 'bulb', 'polttimo', '-1', '0', '1'),
+(NULL, 'battery', 'paristo', '-1', '0', '1'),
+
 (NULL, 'unpacked_chute', 'Pakkaamaton laskuvarjo', '-1', '0', '1');

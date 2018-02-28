@@ -26,8 +26,8 @@ function dbg(msg)
 end
 
 RegisterNetEvent('esx_crafting:craft')
-AddEventHandler('esx_crafting:craft', function (craftableName)
-	TaskStartScenarioInPlace(GetPlayerPed(-1), Config.Scenario, 0, true)
+AddEventHandler('esx_crafting:craft', function (craftableName, craftableScenario)
+	TaskStartScenarioInPlace(GetPlayerPed(-1), craftableScenario, 0, true)
 	ESX.ShowNotification('~g~Valmistetaan ~w~' .. craftableName)
 end)
 
@@ -64,8 +64,13 @@ end
 
 function OpenCraftMenu()
 	
-	if IsPedInAnyVehicle(GetPlayerPed(-1),  false) then
+	local ped = GetPlayerPed(-1)
+	
+	if IsPedInAnyVehicle(ped, false) then
 		ESX.ShowNofication('~r~Ei tarpeeksi tilaa askartelulle.')
+		return
+	elseif IsEntityDead(ped) then
+		ESX.ShowNofication('~r~Kuolleena on vaikea askarrella.')
 		return
 	end
 	
@@ -107,6 +112,10 @@ Citizen.CreateThread(function ()
 		end
 	end
 end)
+
+function openCraftMenu()
+	OpenCraftMenu()
+end
 
 
 
