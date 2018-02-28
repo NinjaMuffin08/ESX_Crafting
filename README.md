@@ -5,12 +5,14 @@ Features:
 1. Ability to craft items and weapons from other items.
 2. Auto-discover recipes (manual discovery mode would be way too harsh)
 3. Ugly ESX-menu
+4. Open Menu export
+5. Configurable scenario for each recipe
 
 Features to come:
 1. Configurable animation for each craftable
 2. Prop crafting and spawning
 3. NetEventHandler for registering craftables
-4. Export function for open menu :D 4 lines of hard work
+4. ------------
 5. Localization for these few strings present
 
 Installation:
