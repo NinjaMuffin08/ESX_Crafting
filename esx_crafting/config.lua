@@ -1,5 +1,6 @@
 Config = {}
 Config.Locale = 'en'
+Config.EnableHotkey = false
 
 Config.Craftables = {
 	
