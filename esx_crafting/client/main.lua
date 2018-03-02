@@ -104,11 +104,13 @@ function OpenCraftMenu()
 end
 
 Citizen.CreateThread(function ()
-	while true do
-		Citizen.Wait(5)
-		if IsControlPressed(0, 36) and IsControlPressed(0, 26) then -- CTRL + C
-			OpenCraftMenu()
-			Citizen.Wait(300)
+	if Config.EnableHotkey then
+		while true do
+			Citizen.Wait(5)
+			if IsControlPressed(0, 36) and IsControlPressed(0, 26) then -- CTRL + C
+				OpenCraftMenu()
+				Citizen.Wait(300)
+			end
 		end
 	end
 end)
