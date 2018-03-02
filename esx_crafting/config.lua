@@ -73,7 +73,6 @@ Config.Craftables = {
 			{ Name = "watch", Amount = 1},
 			{ Name = "ducttape", Amount = 1},
 			{ Name = "screw", Amount = 4},
-			{ Name = "", Amount = 4},
 		},
 		
 		Reward = {Item = "c4", Count = 1 , Type = 'item'},
