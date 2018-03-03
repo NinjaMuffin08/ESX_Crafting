@@ -5,10 +5,8 @@
 ]]--
 
 ESX = nil
-while ESX == nil do
-	TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-	--Citizen.Trace("Requested esx")
-end
+TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+
 
 --debug
 trace = false
